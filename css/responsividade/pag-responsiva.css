@@ -361,10 +361,8 @@
 
 @media screen and (max-width: 420px){ 
     .conteudo.lg{ 
-        width: 245px;
-        height: 80px;
         top: 150px;
-        left: 80px;
+        left: 150px;
     }
 }
 
