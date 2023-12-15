@@ -177,6 +177,7 @@ main {
     right: 200px;
     animation: move 20s infinite; 
     box-shadow: 0px 0px 30px rgb(78, 77, 77);
+    z-index: 5;
 }
 
 /* Criação da animação que fica trocando a imagem que está nos banners */
