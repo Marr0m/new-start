@@ -186,17 +186,17 @@ main {
         background-size: cover;  
     }
     25% {
-        background-image: url(../imagens/fotos/galera-na-sala.jpeg);
+        background-image: url(../imagens/fotos/galera-na-sala.jpeg) center;
         background-size: cover;
 
     }
     50% {
-        background-image: url(../imagens/fotos/galera-no-sermais.jpeg);
+        background-image: url(../imagens/fotos/galera-no-sermais.jpeg) center;
         background-size: cover;
 
     }
     75% {
-        background-image: url(../imagens/fotos/galera-na-sala.jpeg);
+        background-image: url(../imagens/fotos/galera-na-sala.jpeg) center;
         background-size: cover;
     }
     100%{
