@@ -110,6 +110,10 @@ section{
 
 }
 
+.box h3{ 
+    font-size: xx-small;
+}
+
 
 .box img{ 
     object-fit: cover;
@@ -188,7 +192,7 @@ section{
     bottom: 7px;
     right: 7px;
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     font-size: x-small;
     z-index: 1;
