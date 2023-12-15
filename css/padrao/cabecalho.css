@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{ 
+    --primaria: #000000;
+    --secundaria: #004AAD;
+    --terciaria: #D9D9D9;
+    --quarta: #EA15C2;
+    --quinta: #E5E900; 
+    --sexta: #FFFFFF;
+    --dark: #19191a;
+    --slowdark: #373739;
+}
+
+/*-------DEFININDO  O CABEÇALHO -----------*/
+
+.container.nav{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+    opacity: 1;
+    filter: blur(0);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* PARAMETROS DO CABEÇALHO*/
+.cabeca{ 
+    position:  absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--sexta);
+    box-shadow: 0 2px 16px black ;
+    z-index: 10;
+    font-family: "DM Sans", sans-serif;
+}
+
+/*altura da barra de navegeção*/
+.nav{ 
+    height: 9vh;
+}
+
+/* Cor dos icones */
+.logo, .barra, .close{ 
+    color: var(--primaria);
+}
+
+/* Posições e ajustes do icons */
+.nav-icons{ 
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*o logo principal*/
+.logo{ 
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+}
+
+
+.logo:hover{ 
+    background-color: var(--terciaria);
+
+}
+
+/*---- Icones que irão se alternar quando a tela estiver em um tamanho melhor de 1120px  -----*/
+.nav_toggle{ 
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.barra , .close { 
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.close{
+    opacity: 0;
+}
+
+/*-----RESPONSIVIDADE QUANDO A TELA ESTIVER MENOR QUE 1120PX DE LARGURA */
+@media screen and (max-width: 1118px) {
+    /*definindo parametros do menu inteiro*/
+    .menu{ 
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        background-color: #373739d8;
+        backdrop-filter: blur(10px);
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: top .4s, opacity .3s;
+        z-index: 10;
+    }
+
+    /*desaparecendo com a barra de rolagem*/
+    .menu::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .list{ 
+        background-color: var(--sexta);
+        color: var(--primaria);
+        padding-top: 1rem;
+        z-index: 10;
+    }
+
+}
+
+/*Definindo informações dos links*/
+.nav-link{ 
+    color: var(--primaria);
+    background-color: var(--sexta);
+    font-weight: bold;
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s ;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-link:hover{ 
+    background: var(--terciaria);
+}
+
+/*----Mostrar o menu (pelo js) ----*/
+.show-menu{ 
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+}
+
+/*----Transformar o icone de barra no X(pelo js)----*/
+.show-icon .barra{ 
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show-icon .close{ 
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/*-----Itens que tem subitem e dropdown------*/
+.dropdown-iten{ 
+    cursor: pointer;
+}
+
+/*icone que indica que há mais*/
+.dropdown-seta{ 
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: .4s;
+}
+
+.drop-link, .drop-sublink{
+    padding: 1.25rem 1.25rem  1.25rem 2.5rem;
+    color: var(--primaria);
+    background-color: var(--terciaria);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: bold;
+    transition: .3s;
+
+}
+
+.drop-link i, .drop-sublink i{ 
+    font-size: 1.25rem;
+    font-weight: initial;
+}
+
+.drop-link:hover, .drop-sublink:hover{ 
+    background-color: var(--slowdark);
+}
+
+.dropdown-menu, .dropdown-subMenu{ 
+    max-height: 0;
+    overflow: hidden;
+    transition: .4s ease-out;
+}
+
+.dropdown-iten:hover .dropdown-menu, .dropdown-subitem:hover .dropdown-subMenu{
+    max-height: 1000px;
+    transition: .4s ease-in;
+}
+
+.dropdown-iten:hover .dropdown-seta{ 
+    transform: rotate(180deg);
+}
+
+.dropdown-add{ 
+    margin-left: auto;
+}
+
+.drop-sublink{ 
+    background-color: var(--dark);
+    color: var(--sexta);
+
+}
+
+/*-----ADAPTAÃO MOBILE-----*/
+@media screen and (max-width: 340px) {
+    .conteiner{ 
+        margin-inline: 1rem;
+    }
+
+    .nav-link{ 
+        padding-inline: 1rem;
+        z-index: 10;
+    }
+
+}
+
+/* -----ajustes para full screen ou desktop-----*/
+@media screen and (min-width: 1118px) {
+    .container{ 
+        margin-inline: auto;
+    }
+
+    .nav{ 
+        height: calc(9vh + 2rem);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav_toggle{ 
+        display: none;
+    }
+
+    .list{ 
+        height: 100%;
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav-link{ 
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: .25rem;
+    }
+
+
+    .dropdown-iten, .dropdown-subitem{ 
+        position: relative;
+    }
+
+    .dropdown-menu, .drop-subMenu{ 
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 6rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s, top .3s ;
+    }
+
+    .drop-link, .drop-sublink{ 
+        padding: 1rem 2rem;
+    }
+
+    .dropdown-subitem .drop-link{ 
+        padding: 0.5rem;
+    }
+
+    .drop-subMenu{ 
+        position: absolute;
+        left: 100%;
+        top: .5rem;
+    }
+
+    .dropdown-iten:hover .dropdown-menu{ 
+        opacity: 1;
+        top: 5.5rem;
+        pointer-events: initial;
+        transition: top 0.3s;
+    }
+
+    .dropdown-subitem:hover .dropdown-subMenu{ 
+        opacity: 1;
+        top: 0;
+        pointer-events: initial;
+        transition: top .3s ;
+    }
+}

@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap');
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{ 
+    background: #1d2c49;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #1d2c49;
+}
+
+
+.wrapper{
+    margin: 100px auto;
+    max-width: 1100px;
+    width: 90%;
+    position: relative;
+}
+
+.wrapper i{ 
+    height: 50px;
+    width: 50px;
+    background: #FFF;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 10;
+}
+
+.wrapper i:first-child{
+    left: -22px;
+}
+
+.wrapper i:last-child{
+    right: -22px;
+}
+
+.wrapper .carousel{ 
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel :where(.card, .img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel.no-transition{
+    scroll-behavior: auto;
+}
+
+.carousel.dragging{ 
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card{ 
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card{ 
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    border-radius: 8px;
+    display: flex;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+
+.box{ 
+    position: relative;
+    background: gray;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 0px 5px black;
+
+}
+
+
+.box img{ 
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: 2;
+    transition-delay: 0.25s;
+}
+
+.box:hover img{ 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 30px;
+    left: 30%;
+    transition-delay: 0s;
+    border: 4px solid #FFF;
+}
+
+.Titulo {
+    font-size: 15px;
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.box:hover .Titulo  {
+    position: relative;
+    color: white;
+    padding: 30px;
+    padding-bottom: 25px;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+    transform: scale(2);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.Para {
+    color: white;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+    text-align: justify;
+}
+
+.box:hover .Para  {
+    font-size: smaller;
+    padding: 5px 20px;
+    color: white;
+    text-align: center;
+    opacity: .8;
+    z-index: 1;
+    transform: scale(1);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.Buton {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: x-small;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 25%;
+    text-decoration: none;
+}
+
+.box:hover .Buton  {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    text-justify: justify;
+    font-size: x-small;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    transform: scale(1);
+    transition: 0.5s;
+    transition-delay: 0s;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 25%;
+    text-decoration: none;
+}
+
+
+/* -------------------RESPONSIVIDADE ----------------------- */
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100%/2) - 9px);
+    }
+}
+
+/* -------------------- CARDS A BAIXO ------------------- */
+
+.uniao{ 
+    width: 100%;
+}
+
+.iten-cards h1{
+    text-transform: uppercase;
+    opacity: .4;
+}
+
+
+.card-iten{ 
+    margin: 50px auto;
+    padding: 30px;
+    min-height: 400px;
+    width: 800px;
+    justify-content: flex-end;
+    align-items: center;
+    background: #FFF;
+    display: none;
+    position: relative;
+    transition: 1s;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px black;
+}
+
+.card-iten .imagem{ 
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+}
+
+.card-iten .imagem > img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 1s;
+}
+
+.card-iten .resumo{ 
+    height: 100%;
+    width: 400px;
+    text-align: justify;
+    font-size: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-iten .resumo h2{ 
+    margin-bottom: 10px;
+}
+
+.card-iten.open2{ 
+    display: flex;
+}
+

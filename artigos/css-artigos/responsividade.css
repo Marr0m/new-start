@@ -1,0 +1,129 @@
+
+ 
+ @media screen and (max-width: 1024px) {
+    .container.principal{ 
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .container.principal .box{
+            width: 700px;
+    }
+    .elementocolorido2{
+        top: 50px;
+        right: 5%;
+        width: 50%;
+        height: 90%;
+    }
+    .containerimgtitulo{
+        height: 120px ;
+        width: 120px ;
+        right: 35%;
+        top: 25%;
+    }
+    .h1titulo{
+        width: 300px;
+        left: 10%;
+    }
+    .referencias{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px){ 
+    .elementocolorido2{
+        right: 0%;
+    }
+    .containerimgtitulo{
+        right: 25%;
+        top: 25%;
+    }
+    main p, main h2{ 
+        width: 700px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logoimgcontainer{
+        left: 12%;
+        top: 45%;
+        height: 80px;
+    }
+    .elementoo{
+        width: 75%;
+        height: 75%;
+        left: 10%;
+    }
+    .elementocolorido2{
+        right: 10%;
+        width: 50%;
+        height: 90%;
+    }
+    .containerimgtitulo{
+        height: 120px ;
+        width: 120px ;
+        right: 20%;
+        top: 35%;
+    }
+    .h1titulo{
+        font-size: x-large;
+        width: 150px;
+        left: 20px;
+    }
+    .direitosautorais{
+        left: 50%;
+    }
+    main p, main h2{ 
+        width: 400px;
+        padding: 20px;
+    }
+    .imgtexto{ 
+        height: 291px;
+        width: 390px;
+    }
+    .blocos{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 400px){ 
+    main p, main h2{ 
+        width: 350px;
+        padding: 20px;
+    }
+    .logoimgcontainer{ 
+        height: 50px;
+        right: 15%;
+    }
+    .elementoo{ 
+        width: 65%;
+        height: 65%;
+    }
+    .elementocolorido2{ 
+        height: 150px;
+        top: 50px;
+        right: 20px;
+    }
+    .containerimgtitulo{
+        height: 100px ;
+        width: 100px ;
+        top: 60px;
+        right: 65px;
+    }
+    .direitosautorais, .imgdireitos{ 
+        font-size: x-small;
+    }
+    .imgtexto{ 
+        height: 201px;
+        width: 300px;
+    }
+    .h1titulo{
+        width: 200px;
+        font-size: larger;
+    }
+    .blocos{
+        font-size:medium ;
+    }
+}

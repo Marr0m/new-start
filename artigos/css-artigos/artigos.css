@@ -1,0 +1,196 @@
+/*
+#000000
+#004AAD
+#D9D9D9
+#EA15C2
+#E5E900
+#FFFFFF
+#19191a
+#373739
+*/
+
+
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{ 
+    --cor01: #000000;
+    --cor02: #004AAD;
+    --cor03: #D9D9D9;
+    --cor04: #EA15C2;
+    --cor05: #E5E900; 
+    --cor06: #FFFFFF;
+    --cor07: #19191a;
+    --cor08: #373739;
+}
+
+main{ 
+    overflow: hidden;
+}
+
+
+.logodivprincipal{
+    position: relative;
+    display: flex;
+    background-color: var(--cor01);
+    min-height: 400px;
+    width: 100%;
+    justify-self: center;
+}
+
+.logoimgcontainer{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    display: flex;
+    justify-content:  center;
+    height: 90px;
+    z-index: 1;
+}
+
+.elementoo{
+    top: 15%;
+    left: 35%;
+    position: absolute;
+    display: flex;
+    height: 350px;
+    transform: rotate(-40deg);
+}
+
+.elementoroxoseis {
+    width: 100%;
+    height: 100%;
+}
+  
+  .direitosautorais{
+    margin-right: 200px;
+    font-size: small;
+    z-index: 5;
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}  
+
+.containertitulo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 250px;
+}
+
+
+
+.h1titulo{
+    position: absolute;
+    bottom: 50px;
+    right: 45%;
+}
+
+.containerimgtitulo{
+    height: 180px ;
+    width: 180px ;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 350px;
+    z-index: 2;
+}
+
+.imgtitulo{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.elementocolorido2{ 
+    display: flex;
+    position: absolute;
+    right: 300px;
+    height: 300px;
+    transform: rotate(20deg);
+}
+
+
+main{
+    font-family: "DM Sans", sans-serif;
+}
+
+main h2{
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+main p{
+    font-size: larger;
+    text-align: justify;
+    word-spacing: 2px;
+    width: 800px;
+    margin: 20px auto;
+}
+
+main article{ 
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.referencias{
+    background-color:rgba(234, 21, 194, 0.4);
+    border-radius: 10px;
+    width: 800px;
+    margin: 10px auto;
+    font-size: larger;
+    text-align: justify;
+    word-spacing: 2px;
+    color: #000;
+    padding: 20px;
+    position: relative;
+}
+
+
+.link{
+    color: var(--cor02);
+    text-decoration: none;
+ }
+
+.cubo{
+    position: absolute;
+    top: -40px;
+    height: 80px;
+    right: 100px;
+}
+
+.blocos{ 
+    display: flex;
+    gap: 100px;
+}
+
+ .bloco1 ul, .bloco2 ul, .referencias UL {
+    list-style: none;
+ 
+}
+
+.imgtexto{
+    height: 400px;
+    width: 550px;
+    margin: 10px auto;
+    border-radius: 10px;
+    
+}
+
+.imgdireitos{
+   font-size: small;
+   margin: auto
+   
+}
+
+ 
+
+

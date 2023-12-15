@@ -1,0 +1,428 @@
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{ 
+    --primaria: #000000;
+    --secundaria: #004AAD;
+    --terciaria: #D9D9D9;
+    --quarta: #EA15C2;
+    --quinta: #E5E900; 
+    --sexta: #FFFFFF;
+}
+
+
+/* difinição de fonte e exclusão de qualquer coisa que for ser ultrapassado*/
+main { 
+    font-family: "DM Sans", sans-serif;
+    overflow: hidden;
+    transition: 1s;
+    margin-top: 14vh;
+    position: relative;
+}
+
+.scroller{ 
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    z-index: 5;
+    width: 80px;
+    height: 80px;
+    rotate: 135deg;
+    background: url(../imagens/elementos/seta-para-cima.png);
+    background-size: contain;
+    /* filter: blur(15px); */
+    transition: all 5s;
+    opacity: 0;
+    transform: translateX(-100%);
+    border-radius: 50%;
+}
+
+.scroller.invertido{ 
+    rotate: 310deg;
+}
+
+.show{ 
+    opacity: .5;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s ;
+}
+
+
+/* ------------------------------ PRIMEIRO CONTAINER -------------------------------- */
+
+
+/* a apresentação do site, primeiro container visivel: definição de tamanho e dislplay para os box neles*/
+.principal{
+    background: url(../imagens/elementos/Home.png) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* padronização de container*/
+.container.principal { 
+    background-color: var(--terciaria);
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/* padronização das boxs */
+.conteudo { 
+    display: flex;
+    gap: 50px;
+}
+
+/* POR ENQUANTO: tamanho da logo*/ 
+.conteudo.lg { 
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    width: 320px;
+    height: 100px;
+    padding: 20px;
+    background: url(../imagens/elementos/logo.png); 
+    background-size: cover;
+
+}
+
+/* Texto de apresentação, coloração branca e afastamento da borda */
+.conteudo.texto{ 
+    color: var(--sexta);
+    width: 400px;
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 150px;
+    margin-top: 100px;
+    z-index: 2;
+}
+
+/* Botão embaixo do texto*/
+/*Definição de estilização do botão, distância do texto, mudança de cursor, tamanho e cor*/
+.btn { 
+    text-transform: uppercase;
+    margin: 10px 0;
+    width: 180px;
+    padding: 10px;
+    font-size: larger;
+    cursor: pointer;
+    border: 2px solid var(--quinta);
+    background: var(--primaria);
+    transition: 0.2s;
+}
+
+/*Mudar a cor do texto dentro do botão*/
+.btn > a, button > a{ 
+    color: var(--sexta);
+    text-decoration: none;
+}
+
+#btn{ 
+    background: var(--sexta);
+}
+
+#btn a{ 
+    color: var(--primaria);
+}
+
+/* fazer o botão responder ao cursor*/
+.btn:hover, .box button:hover, #btn:hover{ 
+    background: #e5e90034;
+}
+
+
+
+.icon-complementar{ 
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: 550px;
+    bottom: 180px;
+    z-index: 1;
+}
+
+.icon-complementar > img { 
+    color: var(--quinta);
+    height: 100%;
+    width: 100%;
+}
+
+/* Baners que mudam de imagem*/
+/* Definir tamanho, deixar redondo, localização no container, duração da animação e o shadow*/
+.conteudo.banners { 
+    background: url(../imagens/fotos/galera-na-entrada.jfif) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    right: 200px;
+    animation: move 20s infinite; 
+    box-shadow: 0px 0px 30px rgb(78, 77, 77);
+}
+
+/* Criação da animação que fica trocando a imagem que está nos banners */
+@keyframes move {
+    0% { 
+        background-image: url(../imagens/fotos/galera-na-entrada.jfif) center;
+        background-size: cover;  
+    }
+    25% {
+        background-image: url(../imagens/fotos/galera-na-sala.jfif);
+        background-size: cover;
+
+    }
+    50% {
+        background-image: url(../imagens/fotos/galera-no-sermais.jfif);
+        background-size: cover;
+
+    }
+    75% {
+        background-image: url(../imagens/fotos/galera-na-sala.jfif);
+        background-size: cover;
+    }
+    100%{
+        background-image: url(../imagens/fotos/galera-na-entrada.jfif) center;
+        background-size: cover;
+    }
+}
+
+/* Difinação da imagem dentro da box */
+.gallery-imagem { 
+    width: 100%;
+    height: 400px;
+    object-fit: cover ;
+}
+
+.segundo, .terceiro, .quarto{ 
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* ------------------------------ SEGUNDO CONTAINER -------------------------------- */
+
+/* container dentro do container que abriga a justificativa*/ 
+/* colocado no meio, direcionamento e tamanho*/
+
+
+.justificativa{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 140px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* imagem dentro do container*/
+/* tamanho e arredondamento de borda*/
+.img1{
+    height: 417.5px;
+    width: 625px;
+    border-radius: 10%;
+    background: url(../imagens/fotos/fotos-todos-juntos-unico.jpg) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.avusso1{ 
+    position: absolute;
+    background: url(../imagens/elementos/circulo-removebg-preview.png);
+    background-size: contain;
+    width: 500px;
+    height: 250px;
+    bottom: 150px;
+    left: -100px;
+    z-index: -1;
+    transform: rotate(20deg);
+    opacity: 0.5;
+}
+
+.avusso2{ 
+    position: absolute;
+    background-size: contain;
+    width: 228px;
+    height: 490px;
+    background: url(../imagens/elementos/meio_circulo_roxo_pro_lado.png);
+    background-size: contain;
+    top: -50px;
+    right: -20px;
+    opacity: 0.5;
+}
+
+
+.legenda{ 
+    text-align: center;
+    font-style: italic;
+}
+
+/* distanciar cada texto */
+.texto{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    z-index: 5;
+}
+
+/* aumentar o tamanho do titulo */ 
+.texto>h2{
+    font-size: 6em;
+    font-weight: bolder;
+}
+
+.texto > p{ 
+    margin-top: 20px;
+}
+
+/* ------------------------------ terceiro CONTAINER -------------------------------- */
+
+.tudo{ 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background: var(--primaria);
+    color: var(--sexta);
+    overflow: hidden;
+}
+
+.img2, .flip{ 
+    width: 500px;
+    height: 500px;
+}
+
+.box2::before{ 
+    content: "";
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    background: url(../imagens/elementos/minhoca_amarela_horizontal-removebg-preview.png);
+    background-size: contain;
+    top: -150px;
+    left: -800px;
+    transform: rotate(20deg);
+    opacity: 0.5;
+}
+
+.quarto{ 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background: var(--sexta);
+    color: var(--primaria);
+    overflow: hidden;
+}
+
+.box::after{ 
+    content: "";
+    width: 400px;
+    height: 350px;
+    background: url(../imagens/elementos/meio_circulo_roxoamarelo_para_cima-removebg-preview.png);
+    background-size: contain;
+    position: absolute;
+    top: -350px;
+    left: 450px;    
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.box::before{ 
+    content: "";
+    width: 500px;
+    height: 240px;
+    background: url(../imagens/elementos/minhoca_roxa_horizontal-removebg-preview.png);
+    background-size: contain;
+    position: absolute;
+    bottom:  -200px;
+    left: -150px;
+    transform: rotate(30deg);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.box, .box2{
+    align-items: center;
+    position: relative;
+}
+
+.flip, .flip2{
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flipper, .flipper2{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+    transition: transform 0.8s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flipper img, .flipper2 img{ 
+    margin: 20px ;
+    border-radius: 15px;
+    box-shadow: #000000 0 0 ;
+    height: 600px;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    object-fit: cover   ;
+}
+
+.front, .back, .front2, .back2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back, .back2{
+	transform: rotateY(180deg);
+}
+
+#switch:checked ~ .flip > .flipper , #switch2:checked ~ .flip2 > .flipper2  {
+  transform: rotateY(180deg);
+}
+
+#switch2, #switch{ 
+    display: none;
+}
+
+/* ---------------TESTE DE ANIMAÇÃO USANDO O SCROL----------------- */

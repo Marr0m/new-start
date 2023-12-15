@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídia</title>
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="responsividade.css">
+    <link rel="stylesheet" href="midia.css">
+    <link rel="stylesheet" href="../css/padrao/cabecalho.css">
+    <link rel="stylesheet" href="../css/padrao/rodape.css">
+</head>
+<body>
+    <header class="cabeca">
+        <nav class="container nav">
+            <div class="nav-icons">
+                <a href="../index.html" class="logo">
+                 NEW START UNICO
+                </a> 
+                <div class="nav_toggle" id="nav_toggle">   
+                    <i class="fa-solid fa-bars barra"></i>
+                    <i class="fa-solid fa-x close"></i>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                <ul class="list">
+                    <li><a href="../index.html" class="nav-link">HOME</a></li>
+
+                    <li><a href="midia.html" class="nav-link">MÍDIA</a></li>
+
+                    <li><a href="../sobre/sobre.html" class="nav-link">SOBRE NÓS</a></li>
+                    <li class="dropdown-iten">
+                        <div class="nav-link">
+                            <a href="../artigos/artigos.html" class="nav-link">ARTIGOS</a> <i class="fa-solid fa-chevron-down dropdown-seta"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../artigos/identidadedigital.html" class="drop-link">
+                                    Identidade Digital
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../artigos/privacidade.html" class="drop-link">
+                                    Segurança & Privacidade
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../artigos/tecnoart.html" class="drop-link">
+                                    Tecnologia na Arte
+                                </a>
+        
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../contatos/contatos.html" class="nav-link">CONTATOS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+        <main>
+            <section class="container principal">   
+                <div class="gradeImages">
+                    <img src="../imagens/fotos/importantes/Aline.jpg" alt="Aline Soares">
+                    <img src="../imagens/fotos/importantes/victor.jfif" alt="Victor Ferreira">
+                    <img src="../imagens/fotos/importantes/camila-turtelli.jfif" alt="Camila Turtelli">
+                    <img src="../imagens/fotos/importantes/wandreza.jfif" alt="Wandreza Bayona">
+                    <img src="../imagens/fotos/importantes/bruno.jpg" alt="Bruno Estocon">
+                    <img src="../imagens/fotos/importantes/yasodora.jfif" alt="Yasodora Cordova">
+                    <img src="../imagens/fotos/importantes/raul.jfif" alt="Raul Sales">
+                    <img src="../imagens/fotos/importantes/juliana-francine.jfif" alt="Juliana Francine">
+                    <img src="../imagens/fotos/importantes/helio.jpeg" alt="Helio Maria">
+                </div>
+                <div class="texto">
+                    <div class="conteudo lg"></div>
+                    <h2>Somos ousados ao liderar a construção do futuro</h2>
+                </div>
+                <div class="avusso"></div>
+            </section>
+
+            <section class="podcasts">
+
+                <h1>PODCASTS</h1>
+
+                <div class="containerpdcst"> 
+                    
+                    <iframe src="https://www.youtube.com/embed/q0va_w0oVBg" title="Bate-papo com VictorFerreira - Entrevista 01" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>
+
+
+                    <iframe src="https://www.youtube.com/embed/4f2clitoYmY?si=O162T_olZGJ4hjJh"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>
+
+
+                    <iframe src="https://www.youtube.com/embed/ewn20PE1QH4?si=jym2-r7Rld9yT2Ym"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube.com/embed/nsvqtOao2hg?list=PLLlf8nPVHlqD0uKrTpw2On5wg9f0OooOj" title="Bate-papo com Wandreza Bayona - Entrevista 04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            </div>
+            <a href="#terceiro" class="scroller" id="scroller"></a>
+        </div>
+        
+            <div class="galeria-modal" onclick="fecharGaleria()">
+                <span>X</span>
+                <img src="" alt="">
+            </div>
+            <section>
+                <div class="galeria">
+                    <div class="single-galeria w-2 h-2">
+                        <img src="../imagens/galeria/heartsteel.jpg" alt="" onclick="abrirGaleria('../imagens/galeria/heartsteel.jpg')">
+                    </div>
+                    <div class="single-galeria w-2">
+                        <img src="../imagens/galeria/gorillaz.jpg" alt="" onclick="abrirGaleria('../imagens/galeria/gorillaz.jpg')">
+                    </div>
+                    <div class="single-galeria">
+                        <img src="../imagens/galeria/nft-cvr.gif" alt="" onclick="abrirGaleria('../imagens/galeria/nft-cvr.gif')">
+                    </div>
+                    <div class="single-galeria h-2">
+                        <img src="../imagens/galeria/Crookz-Nft.gif" alt="" onclick="abrirGaleria('../imagens/galeria/Crookz-Nft.gif')">
+                    </div>
+                    <div class="single-galeria">
+                        <img src="../imagens/galeria/gow.jpg" alt="" onclick="abrirGaleria('../imagens/galeria/gow.jpg')">
+                    </div>
+                    <div class="single-galeria w-2">
+                        <img src="../imagens/galeria/last-of-us.jpg" alt="" onclick="abrirGaleria('../imagens/galeria/last-of-us.jpg')">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="container final">
+            <a href="../index.html"> <img src="../imagens/elementos/logo.png" alt=""> </a>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <h2><a href="midia.html">MÍDIA</a></h2>
+                    <h2><a href="../sobre/sobre.html">SOBRE NÓS</a></h2>
+                </div>
+                <div class="footer-content">
+                        <h2><a href="../artigos/artigos.html">ARTIGOS</a></h2>
+                </div>
+                <div class="footer-content">
+                    <h2><a href="../contatos/contatos.html">CONTATOS</a></h2>
+                </div>
+            </div>
+                <div class="icones">
+                    <h2>SIGA NOSSAS REDES:</h2>
+                    <div class="icons">
+                        <a href="https://www.instagram.com/newstart_sermais/" target="_blank"><i class="fa-brands fa-instagram" style="color: #DCDCDC;"></i></a>
+                        <a href="https://www.youtube.com/channel/UCdNKu5W8rpTWha31WuFLITg" target="_blank"><i class="fa-brands fa-youtube" style="color: #DCDCDC;"></i></a>
+                        <a href="https://www.deezer.com/br/show/1000443922" target="_blank"><i class="fa-brands fa-deezer" style="color: #DCDCDC;"></i></a>
+                        <a href="https://open.spotify.com/show/6Bkl6lf0xw8ayN03umNbGF" target="_blank"><i class="fa-brands fa-spotify" style="color: #DCDCDC;"></i></a>
+                        <a href="mailto:newstart.unico2023@gmail.com" target="_blank"><i class="fa-solid fa-envelope" style="color: #DCDCDC;"></i></a>
+                    </div>
+                </div>
+        </footer>
+    <script src="https://kit.fontawesome.com/97ff64b5ba.js" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script src="../css/padrao/cabecalho.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+
+*{ 
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root{ 
+   --primaria: #000000;
+   --secundaria: #004AAD;
+   --terciaria: #D9D9D9;
+   --quarta: #EA15C2;
+   --quinta: #E5E900; 
+   --sexta: #FFFFFF;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+section{
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* --------/////////--------- Primeira Sessão --------\\\\\\\\\\\------ */
+.primeiro{ 
+    margin-top: 10vh;
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    flex-direction: column;
+
+}
+
+.primeiro img{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.primeiro::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #000 1%, rgba(0, 0, 0, 0) 80%) no-repeat;
+}
+
+.texto{ 
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+
+    background: #000000ce;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.texto p{ 
+    width: 600px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.logo-inicio{ 
+    width: 310px;
+    height: 100px;
+    background: url(../imagens/elementos/logo.png);
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    left: 550px;
+    z-index: 1;
+    opacity: .6;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.logo-inicio:hover{ 
+    opacity: .5;
+}
+
+/* -------------------------------- SEGUNDA SESSÃO ----------------------------- */
+
+
+.segundo{ 
+    min-height: 100vh;
+    width: 100vw;
+    background: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pokedex{
+    margin: 100px auto;
+    width: 70%;
+    min-height: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 5;
+}
+
+.pokedex::before{ 
+    content: "";
+    position: absolute;
+    background: url(../imagens/elementos/circuloroxo.png);
+    background-size: contain;
+    width: 400px;
+    height: 250px;
+    bottom: 0px;
+    left: 0px;
+    transform: rotate(20deg);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* ------- LISTA LATERAL -------- */
+
+.listagem ul{
+    max-width: 100%;
+    height: 100%;
+}
+
+.listagem ul{ 
+    display: grid;
+    grid-template-rows: repeat(4 ,1fr);
+}
+
+.listagem ul li{ 
+    border: 1px solid #19191a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iten{  
+    background-color: black;
+    color: rgb(255, 255, 255);
+    cursor:pointer;
+    box-shadow: (100, 100 111, 0.3) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+}
+
+
+.iten.ativo{
+    background-color: #19191a;
+}
+
+
+/* ------- CARDS -------- */
+
+.w-2{ 
+    grid-column: span 3;
+}
+
+.iten-card{
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    display: none;
+    position: relative;
+}
+
+
+.iten-card .details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.iten-card .details h2{ 
+    margin-top: 50px;
+    color: #fff;
+    z-index: 2;
+    
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+
+.iten-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.iten-card .card-info{
+    width: 100%;
+    margin-top: 160px;
+    padding: 30px;
+    background-color: #ffffff71;
+    z-index: 2;
+}
+
+.iten-card .card-info.quart{ 
+    padding: 70px;
+    margin-top: 100px;
+}
+
+.iten-card .card-info.quart p{ 
+    margin-top: 10px;
+}
+
+
+
+.iten-card .card-info.quart a{ 
+    color: black;
+    font-size: smaller;
+    text-decoration: none;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.iten-card.open{
+    display: block;
+}
+
+.first{
+    background: url(../imagens/fotos/galera-no-sermais.jfif) center;
+    position: relative;
+}
+
+.second{
+    background: url(../imagens/fotos/sala.jpeg) center;
+    position: relative;
+}
+
+.third{
+    background: url(../imagens/fotos/unico.jfif) center;
+    position: relative;
+}
+
+
+.fourth{
+    background: url(../imagens/fotos/geral-sentado.png) center;
+    position: relative;
+}
+
+ .first::before, .second::before, .third::before, .fourth::before{ 
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000ad;
+}

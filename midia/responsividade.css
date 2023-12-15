@@ -1,0 +1,61 @@
+@media screen and (max-width: 1024px) {
+    .conteudo.lg{ 
+        width: 400px;
+        height: 125px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .gradeImages{ 
+        width: 400px;   
+        height: 400px;
+    }
+    .texto{ 
+        font-size: medium;
+    }
+    .conteudo.lg{ 
+        width: 240px;   
+        height: 80px;
+        margin-left: 20%;
+    }
+    .galeria{ 
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 15vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .principal{ 
+        height: 100vh;
+    }
+    .container.principal{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .gradeImages{
+        margin-bottom: 200px;
+    }
+    .conteudo.lg{ 
+        width: 300px;   
+        height: 100px;
+        margin: 50% 0 0 20%;
+    }
+    .texto{ 
+        font-size: large;
+    }
+    .texto h1{ 
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .conteudo.lg{ 
+        width: 240px;   
+        height: 80px;
+        margin-left: 20%;
+    }
+    .gradeImages{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 200px;
+    }
+}

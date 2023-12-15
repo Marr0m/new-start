@@ -1,0 +1,37 @@
+@media screen and (max-width: 420px){
+
+    .all{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .all .contatos{
+        flex-direction: column;  
+        justify-content: center;
+        width: 400px; 
+    }
+
+    .contatos img{
+        margin: auto; 
+    }
+
+}
+
+@media screen and (max-width: 830px){
+    .all{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .all .contatos{ 
+        margin: auto;
+        width: 600px;
+    }  
+}
+
+@media screen  and (max-width: 950px){
+    .all{
+        gap: 20px;
+    }
+    
+}

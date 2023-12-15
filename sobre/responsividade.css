@@ -1,0 +1,112 @@
+@media screen and (max-width: 1280px) {
+    .iten{
+        padding: 43px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo-inicio{
+        left: 36%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo-inicio{
+        left: 30%;
+    }
+    .card-iten{ 
+        width: 700px;
+    }
+    .card-iten .resumo{ 
+        width: 350px;
+    }
+    .pokedex::before{ 
+        width: 200px;
+        height: 126px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* ------------------ inicio---------------- */
+    .logo-inicio{
+        left: 15%;
+    }
+   .primeiro img{
+       object-fit: contain;
+   }
+   .texto{ 
+       height: 280px;
+   }
+   .texto p{ 
+       width: 380px;
+   }
+
+/* -------------- segundo container ----------------  */
+
+   .segundo{ 
+    min-height: 100vh;
+    height: auto;
+   }
+
+   .pokedex{ 
+    width: 85%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .listagem ul{ 
+    display: flex;
+    height: auto;
+   }
+
+   .iten{ 
+    padding: 10px;
+   }
+   .iten-card .card-info{
+    margin: 0;
+   }
+
+
+    /* ----------terceiro------------------- */
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+    .wrapper{   
+        margin-left: 60px;
+        width: 70%;
+    }
+    .iten-cards h1{ 
+        font-size: medium;
+    }
+    .card-iten{ 
+        width: 350px;
+    }
+    .card-iten .resumo{ 
+        margin-top: 350px;
+    }
+}
+
+
+@media screen and (max-width: 400px) { 
+    .logo-inicio{
+        left: 25px;
+    }
+    .texto p { 
+        margin: auto;
+        width: 350px;
+    }
+        /* --------------Segundo -------------- */
+    .pokedex{
+        width: 95%;
+    }
+    .iten-card .card-info { 
+        padding: 5px 5px;
+    }
+    .iten-card .details h2{
+        font-size: medium;
+    }
+    .iten-card .card-info.quart{
+        padding: 5px;
+    }
+}

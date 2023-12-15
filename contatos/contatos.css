@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{ 
+    --primaria: #000000;
+    --secundaria: #004AAD;
+    --terciaria: #D9D9D9;
+    --quarta: #EA15C2;
+    --quinta: #E5E900; 
+    --sexta: #FFFFFF;
+}
+
+body{
+    margin-top: 100px;
+    background-color: black;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+main img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.all{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    gap: 20px 110px;
+    margin: 50px auto;
+    padding: 15px;
+}
+
+.contatos{
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    margin: 5px;
+
+}
+
+.texto{
+    padding-left: 30px;
+}
+
+.texto ul{
+    margin: 20px;
+    max-width: 300px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.texto ul a{ 
+    color: var(--secundaria);
+    text-decoration: none;
+}
+
+
+
