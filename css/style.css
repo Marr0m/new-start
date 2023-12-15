@@ -165,7 +165,7 @@ main {
 /* Baners que mudam de imagem*/
 /* Definir tamanho, deixar redondo, localização no container, duração da animação e o shadow*/
 .conteudo.banners { 
-    background: url(../imagens/fotos/galera-na-entrada.jfif) center;
+    background: url(../imagens/fotos/galera-na-entrada.jpeg) center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -182,25 +182,25 @@ main {
 /* Criação da animação que fica trocando a imagem que está nos banners */
 @keyframes move {
     0% { 
-        background-image: url(../imagens/fotos/galera-na-entrada.jfif) center;
+        background-image: url(../imagens/fotos/galera-na-entrada.jpeg) center;
         background-size: cover;  
     }
     25% {
-        background-image: url(../imagens/fotos/galera-na-sala.jfif);
+        background-image: url(../imagens/fotos/galera-na-sala.jpeg);
         background-size: cover;
 
     }
     50% {
-        background-image: url(../imagens/fotos/galera-no-sermais.jfif);
+        background-image: url(../imagens/fotos/galera-no-sermais.jpeg);
         background-size: cover;
 
     }
     75% {
-        background-image: url(../imagens/fotos/galera-na-sala.jfif);
+        background-image: url(../imagens/fotos/galera-na-sala.jpeg);
         background-size: cover;
     }
     100%{
-        background-image: url(../imagens/fotos/galera-na-entrada.jfif) center;
+        background-image: url(../imagens/fotos/galera-na-entrada.jpeg) center;
         background-size: cover;
     }
 }
