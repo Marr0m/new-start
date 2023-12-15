@@ -25,6 +25,10 @@ body{
     font-family: 'poppins', sans-serif;
 }
 
+main { 
+    overflow: hidden;
+}
+
 .imags{
     width:300px;
     border-radius: 50px;
@@ -51,7 +55,7 @@ body{
 .container.principal{ 
     margin: 100px  auto;
     position: relative;
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
     grid-gap: 0 120px;
@@ -62,6 +66,7 @@ body{
 .container .box{
     position: relative;
     height: 400px;
+    width: 90%;
     background: #000000;
     display: flex;
     justify-content: center;

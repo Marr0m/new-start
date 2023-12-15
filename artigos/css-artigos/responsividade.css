@@ -46,6 +46,13 @@
 }
 
 @media screen and (max-width: 600px) {
+    #titulo{ 
+        padding: 10px 30px;
+    }
+    #titulo > img{ 
+        margin-top: 100px;
+        width: 300px;
+    }
     .logoimgcontainer{
         left: 12%;
         top: 45%;
@@ -89,6 +96,12 @@
 }
 
 @media screen and (max-width: 400px){ 
+    #titulo{
+        padding: 5px;
+    }
+    #titulo > img{
+        width: 350px;
+    }
     main p, main h2{ 
         width: 350px;
         padding: 20px;
